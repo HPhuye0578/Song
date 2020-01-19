@@ -1,0 +1,169 @@
+USE HPHUYE0578_SCRATCHPAD;
+
+DROP TABLE IF EXISTS Song, artist, album, genre, remix, performanceType;
+
+
+create table Song (
+	songID int primary key,
+	title TEXT,
+	artistID char(4),
+	albumID char(4),
+	genreID char(4),
+	remixID char(4),
+	performanceTypeID char(4),
+	origin VARCHAR(50),
+	releaseDate DATE,
+	format VARCHAR(50)
+);
+
+describe Song;
+
+insert into Song (songID, title, artistID, albumID, genreID, remixID, performanceTypeID, origin, releaseDate, format) values (1, 'pede morbi porttitor lorem', 'AR34', 'AL50', 'GR63', 'RM73', 'PT99', 'Brazil', '2016-12-21', 'MP4');
+insert into Song (songID, title, artistID, albumID, genreID, remixID, performanceTypeID, origin, releaseDate, format) values (2, 'odio condimentum id', 'AR54', 'AL97', 'GR70', 'RM61', 'PT64', 'Philippines', '2016-9-27', 'MP3');
+insert into Song (songID, title, artistID, albumID, genreID, remixID, performanceTypeID, origin, releaseDate, format) values (3, 'odio odio', 'AR81', 'AL62', 'GR58', 'RM28', 'PT86', 'Philippines', '2016-8-27', 'CD');
+insert into Song (songID, title, artistID, albumID, genreID, remixID, performanceTypeID, origin, releaseDate, format) values (4, 'ultrices phasellus', 'AR44', 'AL35', 'GR18', 'RM78', 'PT85', 'Bosnia and Herzegovina', '2017-2-11', 'DVD');
+insert into Song (songID, title, artistID, albumID, genreID, remixID, performanceTypeID, origin, releaseDate, format) values (5, 'urna ut tellus', 'AR27', 'AL78', 'GR81', 'RM17', 'PT24', 'China', '2017-8-20', 'MP3');
+insert into Song (songID, title, artistID, albumID, genreID, remixID, performanceTypeID, origin, releaseDate, format) values (6, 'purus sit amet', 'AR90', 'AL71', 'GR18', 'RM13', 'PT61', 'China', '2017-8-16', 'VLC');
+insert into Song (songID, title, artistID, albumID, genreID, remixID, performanceTypeID, origin, releaseDate, format) values (7, 'non pretium', 'AR46', 'AL95', 'GR47', 'RM68', 'PT89', 'Russia', '2017-01-29', 'MP4');
+insert into Song (songID, title, artistID, albumID, genreID, remixID, performanceTypeID, origin, releaseDate, format) values (8, 'eros viverra', 'AR18', 'AL36', 'GR20', 'RM36', 'PT21', 'Vietnam', '2017-3-24', 'CD');
+insert into Song (songID, title, artistID, albumID, genreID, remixID, performanceTypeID, origin, releaseDate, format) values (9, 'suscipit a feugiat', 'AR44', 'AL13', 'GR54', 'RM65', 'PT83', 'Nigeria', '2017-7-10', 'DVD');
+insert into Song (songID, title, artistID, albumID, genreID, remixID, performanceTypeID, origin, releaseDate, format) values (10, 'justo sollicitudin', 'AR26', 'AL17', 'GR94', 'RM28', 'PT82', 'Portugal', '2017-3-27', 'MP3');
+insert into Song (songID, title, artistID, albumID, genreID, remixID, performanceTypeID, origin, releaseDate, format) values (11, 'leo rhoncus sed', 'AR87', 'AL49', 'GR96', 'RM99', 'PT25', 'Portugal', '2017-7-5', 'DVD');
+insert into Song (songID, title, artistID, albumID, genreID, remixID, performanceTypeID, origin, releaseDate, format) values (12, 'mauris enim leo rhoncus', 'AR74', 'AL29', 'GR74', 'RM31', 'PT46', 'China', '2016-12-17', 'VLC');
+insert into Song (songID, title, artistID, albumID, genreID, remixID, performanceTypeID, origin, releaseDate, format) values (13, 'aliquam erat', 'AR45', 'AL24', 'GR29', 'RM75', 'PT98', 'Cameroon', '2016-11-15', 'MP3');
+insert into Song (songID, title, artistID, albumID, genreID, remixID, performanceTypeID, origin, releaseDate, format) values (14, 'volutpat in', 'AR74', 'AL62', 'GR91', 'RM74', 'PT89', 'South Africa', '2017-6-13', 'CD');
+insert into Song (songID, title, artistID, albumID, genreID, remixID, performanceTypeID, origin, releaseDate, format) values (15, 'tellus semper interdum mauris', 'AR81', 'AL96', 'GR92', 'RM56', 'PT91', 'Russia', '2016-9-13', 'MP4');
+
+select * from Song;
+
+create table artist (
+	artistID char(4) primary key,
+	artistLastName VARCHAR(50),
+	artistFirstName VARCHAR(50),
+	city VARCHAR(50),
+	state VARCHAR(50),
+	zipCode VARCHAR(50),
+	phone VARCHAR(50)
+);
+
+describe artist;
+
+insert into artist (artistID, artistLastName, artistFirstName, city, state, zipCode, phone) values ('AR29', 'Pledge', 'Donovan Pledge', 'Saint Louis', 'Missouri', '63169', '1-(314)845-3008');
+insert into artist (artistID, artistLastName, artistFirstName, city, state, zipCode, phone) values ('AR24', 'Drew', 'Pebrook Drew', 'Saginaw', 'Michigan', '48604', '1-(989)575-6202');
+insert into artist (artistID, artistLastName, artistFirstName, city, state, zipCode, phone) values ('AR14', 'Smalles', 'Zenia Smalles', 'Moreno Valley', 'California', '92555', '1-(951)533-2062');
+insert into artist (artistID, artistLastName, artistFirstName, city, state, zipCode, phone) values ('AR84', 'Gutierrez', 'Rahel Gutierrez', 'Fresno', 'California', '93715', '1-(559)511-3006');
+insert into artist (artistID, artistLastName, artistFirstName, city, state, zipCode, phone) values ('AR94', 'Dingivan', 'Isobel Dingivan', 'Savannah', 'Georgia', '31410', '1-(912)323-4884');
+insert into artist (artistID, artistLastName, artistFirstName, city, state, zipCode, phone) values ('AR12', 'Quarlis', 'Hailee Quarlis', 'Fort Worth', 'Texas', '76121', '1-(817)940-7357');
+insert into artist (artistID, artistLastName, artistFirstName, city, state, zipCode, phone) values ('AR23', 'Jovovic', 'Hort Jovovic', 'Lees Summit', 'Missouri', '64082', '1-(816)964-2171');
+insert into artist (artistID, artistLastName, artistFirstName, city, state, zipCode, phone) values ('AR82', 'Thew', 'Juline Thew', 'Charleston', 'West Virginia', '25356', '1-(304)430-8953');
+insert into artist (artistID, artistLastName, artistFirstName, city, state, zipCode, phone) values ('AR58', 'St. Hill', 'Elsie St. Hill', 'Atlanta', 'Georgia', '31196', '1-(404)156-3488');
+insert into artist (artistID, artistLastName, artistFirstName, city, state, zipCode, phone) values ('AR16', 'Scawen', 'Giacopo Scawen', 'Orlando', 'Florida', '32868', '1-(407)884-7108');
+insert into artist (artistID, artistLastName, artistFirstName, city, state, zipCode, phone) values ('AR35', 'Endicott', 'Wynny Endicott', 'Sacramento', 'California', '95823', '1-(916)217-6156');
+insert into artist (artistID, artistLastName, artistFirstName, city, state, zipCode, phone) values ('AR51', 'de Quincey', 'Lorelei de Quincey', 'Salt Lake City', 'Utah', '84130', '1-(801)359-7577');
+insert into artist (artistID, artistLastName, artistFirstName, city, state, zipCode, phone) values ('AR42', 'Sopper', 'Jamey Sopper', 'Dayton', 'Ohio', '45419', '1-(937)313-2065');
+insert into artist (artistID, artistLastName, artistFirstName, city, state, zipCode, phone) values ('AR70', 'Adame', 'Bail Adame', 'San Diego', 'California', '92170', '1-(619)674-5102');
+insert into artist (artistID, artistLastName, artistFirstName, city, state, zipCode, phone) values ('AR39', 'Harme', 'Tova Harme', 'Carol Stream', 'Illinois', '60351', '1-(309)368-5814');
+
+select * from artist;
+
+create table album (
+	albumID char(4) primary key,
+	albumName VARCHAR(50),
+	yearReleased integer(4)
+);
+
+describe album;
+
+insert into album (albumID, albumName, yearReleased) values ('AL85', 'Klara Lobb', 2004);
+insert into album (albumID, albumName, yearReleased) values ('AL67', 'Lutero McQuirter', 2001);
+insert into album (albumID, albumName, yearReleased) values ('AL31', 'Robert Edland', 2005);
+insert into album (albumID, albumName, yearReleased) values ('AL87', 'Lynn Ewert', 2012);
+insert into album (albumID, albumName, yearReleased) values ('AL77', 'Karylin Vick', 2016);
+insert into album (albumID, albumName, yearReleased) values ('AL70', 'Lida Poyzer', 2016);
+insert into album (albumID, albumName, yearReleased) values ('AL12', 'Rochelle Lightbourne', 2003);
+insert into album (albumID, albumName, yearReleased) values ('AL17', 'Todd Waller-Bridge', 2014);
+insert into album (albumID, albumName, yearReleased) values ('AL97', 'Roxine Gruszka', 2008);
+insert into album (albumID, albumName, yearReleased) values ('AL92', 'Tamara Wheelton', 2007);
+insert into album (albumID, albumName, yearReleased) values ('AL86', 'Gwendolin Broadwood', 2008);
+insert into album (albumID, albumName, yearReleased) values ('AL16', 'Gage Guilloux', 2000);
+insert into album (albumID, albumName, yearReleased) values ('AL30', 'Parsifal McEniry', 2001);
+insert into album (albumID, albumName, yearReleased) values ('AL51', 'Gerard Wagg', 2000);
+insert into album (albumID, albumName, yearReleased) values ('AL88', 'Felike Thomtson', 2014);
+
+select * from album;
+
+create table genre (
+	genreID char(4) primary key,
+	description TEXT
+);
+
+describe genre;
+
+insert into genre (genreID, description) values ('PT45', 'sed vestibulum sit amet cursus');
+insert into genre (genreID, description) values ('PT52', 'luctus cum sociis natoque penatibus');
+insert into genre (genreID, description) values ('PT59', 'sit amet lobortis');
+insert into genre (genreID, description) values ('PT99', 'phasellus id sapien');
+insert into genre (genreID, description) values ('PT76', 'suspendisse potenti in');
+insert into genre (genreID, description) values ('PT47', 'id justo sit amet');
+insert into genre (genreID, description) values ('PT13', 'tellus nisi eu orci');
+insert into genre (genreID, description) values ('PT88', 'diam vitae quam suspendisse potenti');
+insert into genre (genreID, description) values ('PT89', 'nibh in lectus pellentesque');
+insert into genre (genreID, description) values ('PT10', 'lobortis convallis tortor risus');
+insert into genre (genreID, description) values ('PT90', 'et eros vestibulum ac est lacinia');
+insert into genre (genreID, description) values ('PT61', 'in tempor turpis nec euismod');
+insert into genre (genreID, description) values ('PT17', 'quam suspendisse potenti nullam porttitor');
+insert into genre (genreID, description) values ('PT62', 'nisi volutpat eleifend donec');
+insert into genre (genreID, description) values ('PT92', 'ligula nec sem duis aliquam convallis');
+
+select * from genre;
+
+create table remix (
+	remixID char(4) primary key,
+	description TEXT
+);
+
+describe remix;
+
+insert into remix (remixID, description) values ('RM54', 'sit amet consectetuer adipiscing elit');
+insert into remix (remixID, description) values ('RM92', 'vulputate elementum nullam varius');
+insert into remix (remixID, description) values ('RM83', 'sed augue aliquam erat volutpat');
+insert into remix (remixID, description) values ('RM25', 'porta volutpat quam');
+insert into remix (remixID, description) values ('RM30', 'mus vivamus vestibulum');
+insert into remix (remixID, description) values ('RM56', 'montes nascetur ridiculus mus etiam');
+insert into remix (remixID, description) values ('RM66', 'nullam varius');
+insert into remix (remixID, description) values ('RM47', 'neque libero convallis');
+insert into remix (remixID, description) values ('RM16', 'nisl venenatis lacinia');
+insert into remix (remixID, description) values ('RM80', 'cubilia curae mauris viverra');
+insert into remix (remixID, description) values ('RM78', 'ut ultrices');
+insert into remix (remixID, description) values ('RM60', 'justo morbi');
+insert into remix (remixID, description) values ('RM97', 'elit sodales scelerisque mauris');
+insert into remix (remixID, description) values ('RM70', 'cubilia curae mauris viverra diam');
+insert into remix (remixID, description) values ('RM88', 'vulputate luctus');
+
+select * from remix;
+
+create table performanceType (
+	performanceTypeID char(4) primary key,
+	description TEXT
+);
+
+describe performanceType;
+
+insert into performanceType (performanceTypeID, description) values ('PT92', 'nunc purus phasellus in felis');
+insert into performanceType (performanceTypeID, description) values ('PT21', 'habitasse platea dictumst');
+insert into performanceType (performanceTypeID, description) values ('PT20', 'justo morbi ut odio cras mi');
+insert into performanceType (performanceTypeID, description) values ('PT85', 'nisi at nibh in hac');
+insert into performanceType (performanceTypeID, description) values ('PT88', 'cursus urna ut tellus nulla ut');
+insert into performanceType (performanceTypeID, description) values ('PT16', 'justo etiam pretium iaculis justo');
+insert into performanceType (performanceTypeID, description) values ('PT13', 'nisi eu orci');
+insert into performanceType (performanceTypeID, description) values ('PT86', 'elementum pellentesque quisque');
+insert into performanceType (performanceTypeID, description) values ('PT90', 'in blandit ultrices enim');
+insert into performanceType (performanceTypeID, description) values ('PT42', 'volutpat in congue');
+insert into performanceType (performanceTypeID, description) values ('PT95', 'congue eget semper');
+insert into performanceType (performanceTypeID, description) values ('PT81', 'non mauris morbi');
+insert into performanceType (performanceTypeID, description) values ('PT10', 'tincidunt eu felis fusce');
+insert into performanceType (performanceTypeID, description) values ('PT80', 'sed vel enim');
+insert into performanceType (performanceTypeID, description) values ('PT76', 'faucibus orci luctus et ultrices posuere');
+
+select * from performanceType;
+
